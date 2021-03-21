@@ -372,28 +372,30 @@
         <main class="container-fluid" id="itemContent">
             <section class="row">
                 <div class="col-4">
-                    <h1>Item Form</h1>
+                    <h1 class="item-header">Item Form</h1>
+                    <div class="item-inputers shadow-lg p-3 mb-5 bg-white rounded">
+                        <div class="form-group">
+                            <label for="itemCode">Item Code</label>
+                            <input class="form-control" id="itemCode" type="text">
+                            <span class="control-error" id="lblCode"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="itemName">Item Name</label>
+                            <input class="form-control" id="itemName" type="text">
+                            <span class="control-error" id="lblname"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="itemQty">Item Qty</label>
+                            <input class="form-control" id="itemQty" type="text">
+                            <span class="control-error" id="lblqty"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="itemPrice">Unit Price</label>
+                            <input class="form-control" id="itemPrice" type="text">
+                            <span class="control-error" id="lblprice"></span>
+                        </div>
+                    </div>
 
-                    <div class="form-group">
-                        <label for="itemCode">Item Code</label>
-                        <input class="form-control" id="itemCode" type="text">
-                        <span class="control-error" id="lblCode"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="itemName">Item Name</label>
-                        <input class="form-control" id="itemName" type="text">
-                        <span class="control-error" id="lblname"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="itemQty">Item Qty</label>
-                        <input class="form-control" id="itemQty" type="text">
-                        <span class="control-error" id="lblqty"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="itemPrice">Unit Price</label>
-                        <input class="form-control" id="itemPrice" type="text">
-                        <span class="control-error" id="lblprice"></span>
-                    </div>
                     <div class="btn-group">
                         <button class="btn btn-primary" id="btnItem">Add Item</button>
                         <button class="btn btn-danger" id="btnItemDelete">Remove</button>
@@ -404,7 +406,7 @@
 
                 </div>
                 <div class="col-8">
-                    <table class="table table-bordered table-hover">
+                    <table class="table table-bordered table-hover shadow-lg p-3 mb-5 bg-white rounded item-table">
                         <thead class="bg-danger text-white">
                         <tr>
                             <th>Item Code</th>

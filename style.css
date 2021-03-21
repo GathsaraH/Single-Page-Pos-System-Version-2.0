@@ -311,7 +311,7 @@ header a {
 
 .customer-header {
     position: relative;
-    left: 3%;
+    left: 116%;
     font-family: "Roboto Slab", "Open Sans", sans-serif;
     line-height: 45px;
     color: #444444;
@@ -321,7 +321,7 @@ header a {
 
 .customer-table {
     position: relative;
-    top: 3%;
+    top: 13%;
     left: 6px;
 }
 
@@ -329,13 +329,21 @@ header a {
     margin: 18px;
     width: 477px;
 }
-.for-iputers .form-group{
+
+.for-iputers {
+    position: relative !important;
+    top: 24px;
+}
+
+.for-iputers .form-group {
     position: relative;
     left: -33px;
 }
 
 .customer-button {
     position: relative;
+    top: -14px;
+    left: -8px;
 }
 
 #btnCustomer {
@@ -385,7 +393,28 @@ header a {
 
 
 }
-
+.item-inputers.form-group{
+    position: relative!important;
+}
+.item-inputers{
+    position: relative!important;
+    top: 15px;
+}
+.item-header{
+    position: relative!important;
+    left: 135%;
+}
+.form-group {
+    margin: 18px;
+    width: 477px;
+    position: relative !important;
+    left: -33px;
+    top: -7px;
+}
+.item-table{
+    position: relative!important;
+    top: 70px;
+}
 
 /*--------------CONTATC PAGE STYLING---------------------------------*/
 .contact-page {
