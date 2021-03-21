@@ -1,0 +1,514 @@
+body {
+    overflow: hidden;
+    background: rgb(85, 119, 242);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.main-page {
+    width: 98vw;
+    height: 80vh;
+    position: relative;
+    left: 1%;
+    border-radius: 22px;
+    top: -2%;
+}
+
+
+.home-page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 22px;
+    z-index: 100;
+    background: rgb(245, 245, 255);
+
+}
+
+.dashbord {
+    position: relative;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: unset;
+    font-weight: 800;
+    color: #2d2d2d;
+    line-height: 20px;
+    size: 14px;
+    left: 50px;
+    top: 36px;
+}
+
+.welcome-banner {
+    position: relative;
+    width: 58%;
+    height: 125px;
+    background-color: rgb(98, 102, 245);
+    border-radius: 25px;
+    left: 23%;
+    top: 41px;
+}
+
+.welcome {
+    position: relative;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    size: 14px;
+    line-height: 20px;
+    color: rgb(223, 224, 253);
+    left: 79px;
+    top: 26px;
+}
+
+.gathsara {
+    position: relative;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    size: 14px;
+    line-height: 20px;
+    color: rgb(252, 252, 255);
+    left: 233px;
+}
+
+.nice {
+    position: relative;
+    left: 80px;
+    top: 6px;
+    color: rgb(199, 200, 228);
+}
+
+.calnde {
+    position: relative;
+    width: 92px;
+    height: 74px;
+    left: 82%;
+    top: -69px;
+}
+
+.store {
+    position: relative !important;
+    left: 108px;
+    top: 50px;
+}
+
+
+.main-logo {
+    position: relative;
+    top: 21px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-style: normal;
+    line-height: 14px;
+    size: 14px;
+    color: #e8eaed;
+}
+
+.main-nav-bar {
+    height: 80px;
+}
+
+.sell-icon {
+    position: relative !important;
+    width: 200px;
+    height: 200px;
+}
+
+.shoping {
+    position: relative !important;
+    width: 200px;
+    height: 200px;
+    background: transparent;
+}
+
+.cust {
+    position: relative !important;
+    width: 200px;
+    height: 200px;
+    background: transparent;
+}
+
+.buy-name {
+    position: relative !important;
+    left: 52%;
+    top: -43%;
+}
+
+.sell-name {
+    position: relative !important;
+    left: 52%;
+    top: -43%;
+}
+
+.customer-name {
+    position: relative !important;
+    left: 52%;
+    top: -43%;
+}
+
+.main-pages a {
+    font-weight: 700;
+    font-family: "Lato script=latin rev=1", serif;
+    font-style: italic;
+    line-height: 48px;
+    font-size: 27px;
+}
+
+header a {
+    font-size: 14px;
+    font-style: normal;
+    line-height: 21px;
+    color: rgba(240, 246, 252, 0.7);
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+/*------------------ORDER PAGE STYLING---------------------*/
+.order-page {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 22px;
+    position: absolute;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#mydropdown {
+    position: relative;
+    left: -0px;
+    width: 396px;
+    height: 41px;
+}
+
+#txtOrderItemBalance {
+    position: relative;
+}
+
+.order-page::-webkit-scrollbar {
+    display: none;
+}
+
+.order-table {
+    position: relative !important;
+    left: 15px;
+    top: 13px;
+    width: 500px;
+    overflow-y: scroll;
+}
+
+.order-col-one {
+    position: relative !important;
+}
+
+.order-second-section {
+    position: relative !important;
+}
+
+.order-first-section {
+    position: relative !important;
+}
+
+.order-first-section .form-group {
+    position: relative !important;
+    width: 400px;
+}
+
+.order-second-section .form-group {
+    position: relative !important;
+    width: 400px;
+}
+
+.percher-section {
+    position: relative !important;
+    width: 404px;
+    left: 17px;
+    height: 413px;
+}
+
+.percher-section .form-group {
+    position: relative !important;
+    width: 400px;
+    left: -22px;
+}
+
+.Total {
+    font-size: 20px;
+    color: rgb(180, 165, 239);
+    /*left: 115px;*/
+    /*position: relative !important;*/
+}
+
+#txtTotal {
+    position: relative !important;
+    font-size: 30px;
+    color: #3d98ef;
+    /*left: 173px;*/
+    /*top: -37px;*/
+}
+
+#btnBuy {
+    width: 91px;
+}
+
+.order-button {
+    position: relative !important;
+    left: 40px;
+}
+
+.SubTotal {
+    position: relative !important;
+    font-size: 20px;
+    color: #ef5350;
+    /*left: 77px;*/
+    /*top: -56px;*/
+}
+
+#txtSubTotal {
+    position: relative !important;
+    font-size: 30px;
+    color: #ef5350;
+    /*left: 173px;*/
+    /*top: -92px;*/
+
+}
+
+.percher-section .form-group {
+    position: relative !important;
+    left: -31px;
+    top: -34px;
+}
+
+.balnce-lbl {
+    position: relative;
+!important;
+    /*top: -105px;*/
+}
+
+.balnce-txt {
+    position: relative;
+!important;
+    /*top: -105px;*/
+}
+
+.Order-cart {
+    position: relative !important;
+}
+
+/*----------------CUSTOMER PAGE STYLING -----------------------------------------*/
+
+.customer-page {
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+    position: absolute;
+    background-color: #ffffff;
+
+}
+
+
+.customer-header {
+    position: relative;
+    left: 3%;
+    font-family: "Roboto Slab", "Open Sans", sans-serif;
+    line-height: 45px;
+    color: #444444;
+    font-weight: 600;
+    top: 1%;
+}
+
+.customer-table {
+    position: relative;
+    top: 3%;
+    left: 6px;
+}
+
+.form-group {
+    margin: 18px;
+    width: 477px;
+}
+.for-iputers .form-group{
+    position: relative;
+    left: -33px;
+}
+
+.customer-button {
+    position: relative;
+}
+
+#btnCustomer {
+    position: relative !important;
+    width: 100px;
+    border-radius: 29px;
+}
+
+#btnCusDelete {
+    position: relative;
+!important;
+    width: 100px;
+    border-radius: 41px;
+}
+
+#btnUpdate {
+    position: relative;
+!important;
+    border-radius: 42px;
+    width: 117px;
+
+}
+
+#btn-clear1 {
+    position: relative;
+!important;
+    border-radius: 38px;
+    width: 100px;
+
+}
+
+#btnGetAll {
+    position: relative;
+!important;
+    border-radius: 44px;
+    width: 100px;
+
+}
+
+/*----------------ITEM PAGE STYLING -----------------------------------------*/
+.item-page {
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+    position: absolute;
+    background-color: #ffffff;
+
+
+}
+
+
+/*--------------CONTATC PAGE STYLING---------------------------------*/
+.contact-page {
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+    position: absolute;
+    background-color: white;
+}
+
+.main-image {
+    width: 400px;
+    width: 400px;
+    position: relative;
+}
+
+.custom-shape-divider-top-1615335267 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wrapper-time {
+    height: 44px;
+    width: 163px;
+    position: relative;
+    background: linear-gradient(
+            135deg, #14ffe9, #ffeb3b, #ff00e0);
+    border-radius: 10px;
+    cursor: default;
+    animation: animate 1.5s linear infinite;
+    left: 88%;
+    top: -142px;
+}
+
+.wrapper-time .display,
+.wrapper-time span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper-time .display {
+    z-index: 999;
+    height: 30px;
+    width: 123px;
+    background: #1b1b1b;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.display #time {
+    line-height: 33px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(
+            135deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.wrapper-time span {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: inherit;
+}
+
+.wrapper-time span:first-child {
+    filter: blur(7px);
+}
+
+.wrapper-time span:last-child {
+    filter: blur(20px);
+}
+
+.buy {
+    position: relative;
+    left: 28%;
+    top: 42%;
+}
+
+.sell {
+    position: relative;
+    left: 39%;
+    top: 42%;
+}
+
+.customer {
+    position: relative;
+    left: 49%;
+    top: 42%;
+}
+
+.main-image {
+    position: absolute;
+}
+
+.order-main {
+    position: relative;
+    left: 42%;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color: #0095ff;
+    line-height: 17px;
+    font-style: normal;
+    font-weight: 400;
+    top: 5%;
+}
+
+input[requiredtype=text], select {
+    border: 1px solid #0c0a0a;
+}

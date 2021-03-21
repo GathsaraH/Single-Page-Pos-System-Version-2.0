@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assests/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="style.css">
+    <title>Hakintosh POS System</title>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-lg p-3 mb-5 bg-body rounded main-nav-bar">
+        <div class="container-fluid main-nav-bar">
+            <a class="navbar-brand main-logo shadow p-3 mb-5 bg-white rounded" href="#">Hakintosh</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 main-pages">
+                    <li class="nav-item">
+                        <a class="nav-link active" onclick="forPageOne();" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="OpenLoadFuntion()()" href="#customer">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="loadingMehtord()" href="#item">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="forOrder()" href="#order">Oders</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="constructorMethords()" href="#contact">Manage Orders</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="main-page">
+    <section id="home" class="home-page">
+        <h1 class="dashbord">Dashboard</h1>
+        <section class="welcome-banner">
+            <h2 class="welcome">Welcome,</h2>
+            <h2 class="gathsara">Mr. Gathsara</h2>
+            <h5 class="nice">Have a nice day at work</h5>
+            <img class="calnde" src="assests/img/Calendar.png">
+        </section>
+
+        <div class="wrapper-time">
+            <div class="display">
+                <div id="time">
+                </div>
+            </div>
+        </div>
+        <div class="container store">
+            <div class="row">
+                <div class="col-sm ">
+                    <img class="sell-icon" src="assests/img/sell.gif"/>
+                    <h1 class="buy-name">: 100</h1>
+
+                </div>
+                <div class="col-sm">
+                   <img class="shoping" src="assests/img/item.gif">
+                    <h1 class="sell-name">: 450
+                </div>
+                <div class="col-sm">
+                    <img class="cust" src="assests/img/cust.gif">
+                    <h1 class="customer-name">: 700</h1>-
+                </div>
+            </div>
+        </div>
+
+        <!--        <h1 class="buy-name">: 100</h1>-->
+        <!--        <h1 class="sell-name">: 450</h1>-->
+        <!--        <h1 class="customer-name">: 700</h1>-->
+
+    </section>
+    <section id="customer" class="customer-page">
+        <main class="container-fluid " id="customerContent">
+            <section class="row">
+                <div class="col-4">
+                    <h1 class="customer-header">Customer Registraion</h1>
+                    <div class="shadow-lg p-3 mb-5 bg-white rounded for-iputers">
+                        <div class="form-group ">
+                            <label for="txtCustomerID">Customer ID</label>
+                            <input class="form-control" id="txtCustomerID" required type="text">
+                            <span class="control-error" id="lblcusid"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCustomerName">Customer Name</label>
+                            <input class="form-control" id="txtCustomerName" type="text">
+                            <span class="control-error" id="lblcusname"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCustomerAddress">Customer Address</label>
+                            <input class="form-control" id="txtCustomerAddress" type="text">
+                            <span class="control-error" id="lblcusaddress"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCustomerSalry">Customer Salary</label>
+                            <input class="form-control" id="txtCustomerSalry" type="text">
+                            <span class="control-error" id="lblcussalary"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCustomerSalry">Customer Contact</label>
+                            <input class="form-control" id="txtCustomerContact" type="text">
+                            <span class="control-error" id="lblcuscontact"></span>
+                        </div>
+                    </div>
+                    <div class="btn-group customer-button">
+                        <button class="btn btn-primary" id="btnCustomer">Save</button>
+                        <button class="btn btn-danger" id="btnCusDelete">Remove</button>
+                        <button class="btn btn-warning" id="btnUpdate">Update</button>
+                        <button class="btn btn-success" id="btnGetAll">Get All</button>
+                        <button class="btn btn-danger" id="btn-clear1">Clear All</button>
+                    </div>
+
+                </div>
+                <div class="col-8">
+                    <table class="table table-green table-hover customer-table shadow-lg p-3 mb-5 bg-white rounded">
+                        <thead class="bg-success text-white customer-table-border">
+                        <tr>
+                            <th>Customer ID</th>
+                            <th>Customer Name</th>
+                            <th>Customer Address</th>
+                            <th>Customer Salary</th>
+                            <th>Customer Contact</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblCustomer">
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </section>
+
+
+    <section id="order" class="order-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm order-first-section">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label id="order-date">Date :</label>
+                            <input class="form-control" id="txtDate" type="date">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCustomerID">Order ID</label>
+                        <input class="form-control" id="txtOrderID" required type="text">
+                        <span class="control-error" id="lblorderid"></span>
+                    </div>
+                    <!--                    <div class="form-group">-->
+                    <!--                        <label for="txtCustomerID">Customer ID</label>-->
+                    <!--                        <input class="form-control" id="txtOrderCustomerID" required type="text">-->
+                    <!--                        <span class="control-error" id="lblordercustomerid"></span>-->
+
+                    <!--                    </div>-->
+                    <div class="form-group">
+                        <form name="register">
+                            <label for="txtCustomerID">Customer ID</label>
+                            <select id="mydropdown" name="mydropdown"></select>
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCustomerID">Customer Name</label>
+                        <input class="form-control" id="txtOrderCustName" required type="text">
+                        <span class="control-error" id="lblordercustname"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCustomerID">Customer Contact</label>
+                        <input class="form-control" id="txtOrderCustContact" required type="text">
+                        <span class="control-error" id="lblordercustcontact"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCustomerID">Item Name</label>
+                        <input class="form-control" id="txtOrderItemName" required type="text">
+                        <span class="control-error" id="lblorderitemname"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCustomerID">Item ID</label>
+                        <input class="form-control" id="txtOrderItemID" required type="text">
+                        <span class="control-error" id="lblorderitemid"></span>
+                    </div>
+                    <div class="form-group order-button">
+                        <div class="btn-group order-button  customer-button">
+                            <button class="btn btn-primary" id="btnAddCart">Add Cart</button>
+                            <button class="btn btn-danger" id="btnBuy">Buy</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-sm order-second-section">
+                    <div class="form-group">
+                        <label for="txtCustomerID">Item Price</label>
+                        <input class="form-control" id="txtOrderItemPrice" required type="text">
+                        <span class="control-error" id="lblorderitemprise"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCustomerID">Order Quantity</label>
+                        <input class="form-control" id="txtOrderItemQty" required type="text">
+                        <span class="control-error" id="lblorderitemqty"></span>
+                    </div>
+                    <div class="percher-section shadow-lg p-3 mb-5 bg-white rounded">
+                        <div class="form-group">
+                            <label for="txtCustomerID">Cash</label>
+                            <input class="form-control" id="txtOrderItemCash" required type="text">
+                            <span class="control-error" id="lblorderitemcash"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCustomerID">Discount</label>
+                            <input class="form-control" id="txtOrderItemDiscount" required type="text">
+                            <span class="control-error" id="lblorderitemdiscount"></span>
+                        </div>
+                        <div class="form-group total-price">
+                            <label class="Total" for="txtCustomerID">Total :</label>
+                            <br>
+                            <span class="txtTotal" id="txtTotal">00.0 </span>Rs/
+                        </div>
+                        <div class="form-group sub-total">
+                            <label class="SubTotal" for="txtCustomerID"> Sub Total :</label>
+                            <br>
+                            <span id="txtSubTotal">00.0 </span>Rs/
+                        </div>
+                        <div class="form-group ">
+                            <label class="balnce-lbl" for="txtCustomerID">Balance</label>
+                            <input class="form-control balnce-txt" id="txtOrderItemBalance" required type="text">
+                            <span class="control-error" id="lblorderitembalance"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm container-fluid">
+                    <div class="col-8"
+                         style="height:500px; position: relative; width: 550px; top: 40px; overflow-y: scroll">
+                        <table class="table table-green table-hover  shadow-lg p-3 mb-5 bg-body rounded order-table ">
+                            <thead class="bg-primary text-white customer-table-border rounded-circle">
+                            <tr>
+                                <th>Item ID</th>
+                                <th>Item Name</th>
+                                <th>Item Price</th>
+                                <th>Quantity</th>
+                            </tr>
+                            </thead>
+                            <tbody id="orderTable">
+                            <tr>
+                                <td>I001</td>
+                                <td>Mouse</td>
+                                <td>1500.00</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>I002</td>
+                                <td>KeyBord</td>
+                                <td>3500.00</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>I003</td>
+                                <td>Pen</td>
+                                <td>3500.00</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>I004</td>
+                                <td>SSD Hard</td>
+                                <td>3500.00</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>I005</td>
+                                <td>VGA Cable</td>
+                                <td>3500.00</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>I006</td>
+                                <td>Mounitor</td>
+                                <td>3500.00</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>I007</td>
+                                <td>Desktop</td>
+                                <td>3500.00</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>I008</td>
+                                <td>WebCam</td>
+                                <td>3500.00</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>I009</td>
+                                <td>HDMI Cable</td>
+                                <td>3500.00</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>I010</td>
+                                <td>Router</td>
+                                <td>3500.00</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>I011</td>
+                                <td>Chipset</td>
+                                <td>3500.00</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>I012</td>
+                                <td>MotherBord</td>
+                                <td>3500.00</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>I013</td>
+                                <td>Ram</td>
+                                <td>3500.00</td>
+                                <td>100</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="col-md-12 mt-4" style="height:180px; overflow-y: scroll">
+                        <table class="table table-green table-hover  shadow-lg p-3 mb-5 bg-body rounded Order-cart ">
+                            <thead class="bg-warning text-white customer-table-border rounded-circle">
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer Name</th>
+                                <th>Item ID</th>
+                                <th>Item Name</th>
+                                <th>Item Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                            </thead>
+                            <tbody id="ordet-cart-table">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="item" class="item-page">
+        <main class="container-fluid" id="itemContent">
+            <section class="row">
+                <div class="col-4">
+                    <h1>Item Form</h1>
+
+                    <div class="form-group">
+                        <label for="itemCode">Item Code</label>
+                        <input class="form-control" id="itemCode" type="text">
+                        <span class="control-error" id="lblCode"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemName">Item Name</label>
+                        <input class="form-control" id="itemName" type="text">
+                        <span class="control-error" id="lblname"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemQty">Item Qty</label>
+                        <input class="form-control" id="itemQty" type="text">
+                        <span class="control-error" id="lblqty"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemPrice">Unit Price</label>
+                        <input class="form-control" id="itemPrice" type="text">
+                        <span class="control-error" id="lblprice"></span>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" id="btnItem">Add Item</button>
+                        <button class="btn btn-danger" id="btnItemDelete">Remove</button>
+                        <button class="btn btn-warning" id="btnItemUpdate">Update</button>
+                        <button class="btn btn-success">Get All</button>
+                        <button class="btn btn-danger" id="btn-clear">Clear All</button>
+                    </div>
+
+                </div>
+                <div class="col-8">
+                    <table class="table table-bordered table-hover">
+                        <thead class="bg-danger text-white">
+                        <tr>
+                            <th>Item Code</th>
+                            <th>Item Name</th>
+                            <th>Item Qty</th>
+                            <th>Item Price</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblItem">
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </section>
+    <section id="contact" class="contact-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <form name="register">
+                            <label for="txtCustomerID">Customer ID</label>
+                            <select id="txtMange-Orders" name="mydropdown"></select>
+                        </form>
+                    </div>
+                    <table class="table table-bordered table-hover">
+                        <thead class="bg-danger text-white">
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer Name</th>
+                            <th>Item Name</th>
+                            <th>Total Price</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblManage-orders">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="assests/jquery/jquery-3.6.0.min.js"></script>
+<script src="controller/mainScript.js"></script>
+<script src="controller/CustomerController.js"></script>
+<script src="controller/ItemController.js"></script>
+<script src="controller/OrderController.js"></script>
+<script src="controller/ManageOrderController.js"></script>
+<script src="model/Customer.js"></script>
+<script src="model/Item.js"></script>
+<script src="model/Order.js"></script>
+<script src="db/DB.js"></script>
+</body>
+</html>
