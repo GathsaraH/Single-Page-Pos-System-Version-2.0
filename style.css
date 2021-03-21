@@ -24,7 +24,7 @@ body::-webkit-scrollbar {
     position: absolute;
     border-radius: 22px;
     z-index: 100;
-    background: rgb(245, 245, 255);
+    background: rgb(249, 245, 255);
 
 }
 
@@ -393,8 +393,12 @@ header a {
 
 
 }
-.item-inputers.form-group{
-    position: relative!important;
+.item-inputers .form-group{
+    margin: 18px;
+    width: 477px;
+    position: relative !important;
+    left: -33px;
+    top: -7px;
 }
 .item-inputers{
     position: relative!important;
@@ -404,13 +408,7 @@ header a {
     position: relative!important;
     left: 135%;
 }
-.form-group {
-    margin: 18px;
-    width: 477px;
-    position: relative !important;
-    left: -33px;
-    top: -7px;
-}
+
 .item-table{
     position: relative!important;
     top: 70px;

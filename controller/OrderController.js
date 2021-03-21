@@ -109,6 +109,26 @@ $('#btnAddCart').click(function () {
 
 })
 
+$('#btnBuy').click(function (){
+
+})
+
+$('#txtOrderItemCash').on('keyup',function (btn){
+    if (btn.key=="Enter"){
+        let total=$('#txtTotal').text();
+        let cash=$('#txtOrderItemCash').val();
+        let settle=(cash-total);
+        let balance=$("#txtOrderItemBalance").val(settle);
+        if (total>cash){
+            alert("Thwa Salli Oni Miniho")
+
+        }else {
+            let balance=$("#txtOrderItemBalance").val(settle);
+        }
+    }
+})
+
+
 function clearOrders() {
     $('#txtOrderItemQty').val();
     $('#txtOrderItemPrice').val();
